@@ -31,6 +31,12 @@ namespace Vidly.Controllers
             //return RedirectToAction("Index", "Home", new { page = 1, sortBy="name"};
         }
 
+        // GET: Movies/Released/2015/04
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year + "/" + month);
+        }
+
         // GET: Movies/Edit/1
         public ActionResult Edit(int id)
         {
