@@ -26,7 +26,9 @@ namespace Vidly.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            var customers = _context.Customers
+                                    .Include(c => c.MembershipType)
+                                    .ToList();
 
             return View(customers);
         }
@@ -34,7 +36,9 @@ namespace Vidly.Controllers
         // GET: Customers/1
         public ActionResult Details(int id)
         {
-            var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers
+                                   .Include(c => c.MembershipType)
+                                   .SingleOrDefault(c => c.Id == id);
 
             if (customer == null)
                 return HttpNotFound();
