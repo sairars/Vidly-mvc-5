@@ -49,10 +49,9 @@ namespace Vidly.Controllers
         // GET: Customers/New
         public ActionResult New()
         {
-            var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
-                MembershipTypes = membershipTypes,
+                MembershipTypes = _context.MembershipTypes.ToList(),
                 Customer = new Customer()
             };
 
@@ -67,10 +66,9 @@ namespace Vidly.Controllers
             if (customer == null)
                 return HttpNotFound();
 
-            var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
-                MembershipTypes = membershipTypes,
+                MembershipTypes = _context.MembershipTypes.ToList(),
                 Customer = customer
             };
 
