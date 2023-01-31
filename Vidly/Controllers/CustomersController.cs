@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using System.Data.Entity;
-
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -44,6 +44,19 @@ namespace Vidly.Controllers
                 return HttpNotFound();
 
             return View(customer);
+        }
+
+        // GET: Customers/New
+        public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var viewModel = new CustomerFormViewModel
+            {
+                MembershipTypes = membershipTypes,
+                Customer = new Customer()
+            };
+
+            return View(viewModel);
         }
     }
 }
