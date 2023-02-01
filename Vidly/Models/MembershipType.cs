@@ -19,7 +19,5 @@ namespace Vidly.Models
         public static readonly int Unknown = 0;
 
         public static readonly int PayAsYouGo = 1;
-        
-
     }
 }
