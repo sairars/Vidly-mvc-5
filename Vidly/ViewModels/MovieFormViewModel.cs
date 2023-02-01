@@ -29,7 +29,6 @@ namespace Vidly.ViewModels
         [Display(Name = "Genre")]
         public byte? GenreId { get; set; }
 
-
         public string Title 
         { 
             get
