@@ -23,13 +23,13 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
-        // GET: Customers
+        // GET Customers
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Customers/1
+        // GET Customers/1
         public ActionResult Details(int id)
         {
             var customer = _context.Customers
@@ -42,7 +42,7 @@ namespace Vidly.Controllers
             return View(customer);
         }
 
-        // GET: Customers/New
+        // GET Customers/New
         public ActionResult New()
         {
             var viewModel = new CustomerFormViewModel
@@ -54,7 +54,7 @@ namespace Vidly.Controllers
             return View("CustomerForm", viewModel);
         }
 
-        // GET: Customers/Edit/1
+        // GET Customers/Edit/1
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -71,6 +71,7 @@ namespace Vidly.Controllers
             return View("CustomerForm", viewModel);
         }
 
+        // POST Customers/Save
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
