@@ -20,7 +20,7 @@ namespace Vidly.Models
 
         [Display(Name = "Number In Stock")]
         [Range(1, 20)]
-        public short NumberInStock { get; set; }
+        public byte NumberInStock { get; set; }
 
         [Display(Name = "Genre")]
         public byte GenreId { get; set; }

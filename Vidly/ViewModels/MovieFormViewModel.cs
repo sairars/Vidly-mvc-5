@@ -23,7 +23,7 @@ namespace Vidly.ViewModels
         [Required]
         [Range(1,20)]
         [Display(Name = "Number In Stock")]
-        public short? NumberInStock { get; set; }
+        public byte? NumberInStock { get; set; }
 
         [Required]
         [Display(Name = "Genre")]
