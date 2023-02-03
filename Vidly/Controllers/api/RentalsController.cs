@@ -31,11 +31,17 @@ namespace Vidly.Controllers.api
                                     .Single(c => c.Id == newRentalDto.CustomerId);
 
             var movies = _context.Movies
-                                .Where(m => newRentalDto.MovieIds.Contains(m.Id));
+                                .Where(m => newRentalDto.MovieIds.Contains(m.Id))
+                                .ToList();
 
             var currentDate = DateTime.Now;
             foreach (var movie in movies)
             {
+                if (movie.NumberAvailable == 0)
+                    return BadRequest("Movie is unavailable");
+
+                movie.NumberAvailable--;
+
                 var rental = new Rental
                 {
                     Customer = customer,

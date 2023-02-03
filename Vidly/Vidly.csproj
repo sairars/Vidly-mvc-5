@@ -296,6 +296,14 @@
     <Compile Include="Migrations\202302031838034_ChangeDateTypeOfMoviesInStockToByte.Designer.cs">
       <DependentUpon>202302031838034_ChangeDateTypeOfMoviesInStockToByte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302031850543_AddNumberAvailableToMovies.cs" />
+    <Compile Include="Migrations\202302031850543_AddNumberAvailableToMovies.Designer.cs">
+      <DependentUpon>202302031850543_AddNumberAvailableToMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302031852113_PopulateNumberAvailableInMovies.cs" />
+    <Compile Include="Migrations\202302031852113_PopulateNumberAvailableInMovies.Designer.cs">
+      <DependentUpon>202302031852113_PopulateNumberAvailableInMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -634,6 +642,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302031838034_ChangeDateTypeOfMoviesInStockToByte.resx">
       <DependentUpon>202302031838034_ChangeDateTypeOfMoviesInStockToByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302031850543_AddNumberAvailableToMovies.resx">
+      <DependentUpon>202302031850543_AddNumberAvailableToMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302031852113_PopulateNumberAvailableInMovies.resx">
+      <DependentUpon>202302031852113_PopulateNumberAvailableInMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
