@@ -23,7 +23,7 @@ namespace Vidly.Controllers.api
             _context.Dispose();
         }
 
-        // POST /api/rentals
+        // POST /api/newrentals
         [HttpPost]
         public IHttpActionResult CreateRental(NewRentalDto newRentalDto)
         {
